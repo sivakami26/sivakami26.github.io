@@ -3,70 +3,255 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name | Data Analytics Portfolio</title>
+  <title>Sivakami | Data Analytics Portfolio</title>
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 2rem 1rem; }
-    header { border-bottom: 2px solid #eaeaea; padding-bottom: 1.5rem; margin-bottom: 2rem; }
-    h1 { margin: 0 0 0.5rem 0; color: #111; }
-    .tagline { font-size: 1.1rem; color: #555; margin-bottom: 1rem; }
-    .links a { margin-right: 15px; color: #0066cc; text-decoration: none; font-weight: bold; }
-    .links a:hover { text-decoration: underline; }
-    .project-card { border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; background: #fafafa; }
-    .project-title { margin-top: 0; color: #222; }
-    .tags { margin: 0.5rem 0; }
-    .tag { background: #e1f0ff; color: #0055b3; padding: 3px 8px; border-radius: 4px; font-size: 0.85rem; font-weight: 500; margin-right: 5px; }
-    .button-group { margin-top: 1rem; }
-    .btn { display: inline-block; padding: 6px 12px; background: #0066cc; color: #fff; border-radius: 4px; text-decoration: none; font-size: 0.9rem; margin-right: 10px; }
-    .btn-alt { background: #444; }
+    :root {
+      --primary: #0052cc;
+      --primary-dark: #003d99;
+      --bg-gray: #f8f9fa;
+      --card-border: #e2e8f0;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --tag-bg: #eff6ff;
+      --tag-text: #1d4ed8;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.6;
+      color: var(--text-main);
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem;
+      background-color: #ffffff;
+    }
+
+    header {
+      border-bottom: 2px solid var(--card-border);
+      padding-bottom: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin: 0 0 0.4rem 0;
+      color: #0f172a;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--primary);
+      margin: 0 0 0.8rem 0;
+    }
+
+    .bio {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      margin-bottom: 1.5rem;
+      max-width: 780px;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .nav-btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 14px;
+      background-color: var(--bg-gray);
+      color: var(--text-main);
+      border: 1px solid var(--card-border);
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .nav-btn:hover {
+      background-color: #f1f5f9;
+      border-color: #cbd5e1;
+      color: var(--primary);
+    }
+
+    .nav-btn.primary {
+      background-color: var(--primary);
+      color: #ffffff;
+      border: 1px solid var(--primary);
+    }
+
+    .nav-btn.primary:hover {
+      background-color: var(--primary-dark);
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #0f172a;
+      margin-bottom: 1.5rem;
+      border-left: 4px solid var(--primary);
+      padding-left: 10px;
+    }
+
+    .project-card {
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 1.75rem;
+      margin-bottom: 1.75rem;
+      background: #ffffff;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .project-card:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .project-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 0 0 0.5rem 0;
+      color: #0f172a;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 1rem;
+    }
+
+    .tag {
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .project-card p {
+      font-size: 0.95rem;
+      color: #334155;
+      margin-bottom: 1.25rem;
+    }
+
+    .project-highlights {
+      margin: 0 0 1.25rem 0;
+      padding-left: 1.2rem;
+      font-size: 0.92rem;
+      color: #475569;
+    }
+
+    .project-highlights li {
+      margin-bottom: 0.35rem;
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding-top: 1.5rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Your Name</h1>
-    <p class="tagline">Master of Data Analytics | Former Hardware/Firmware Engineer (Qualcomm & AMD)</p>
-    <div class="links">
-      <a href="https://github.com/yourusername" target="_blank">GitHub Profile</a>
-      <a href="https://public.tableau.com/app/profile/yourprofile" target="_blank">Tableau Public</a>
-      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-      <a href="resume.pdf" target="_blank">Download Resume (PDF)</a>
+    <h1>Sivakami</h1>
+    <div class="subtitle">Master of Data Analytics Candidate | 3.78 GPA</div>
+    <p class="bio">
+      Combining advanced statistical modeling and machine learning with 8+ years of hardware engineering rigor (Qualcomm / AMD). Specialized in non-parametric statistical inference, 3-tier data hygiene pipelines, and production-grade script automation.
+    </p>
+    <div class="nav-links">
+      <a href="https://github.com/sivakami26" class="nav-btn" target="_blank">GitHub Profile</a>
+      <a href="https://public.tableau.com" class="nav-btn" target="_blank">Tableau Public</a>
+      <a href="https://linkedin.com" class="nav-btn" target="_blank">LinkedIn</a>
+      <a href="resume.pdf" class="nav-btn primary" target="_blank">Download Resume (PDF)</a>
     </div>
   </header>
 
   <section>
-    <h2>Featured Analytics Projects</h2>
+    <h2>Featured Data Analytics Projects</h2>
 
-    <!-- Project 1 -->
+    <!-- Project 1: EQAO -->
     <div class="project-card">
-      <h3 class="project-title">Ontario School Board Performance Analysis</h3>
-      <p class="tags">
+      <h3 class="project-title">Ontario School Board Literacy & Governance Analysis</h3>
+      <div class="tags">
         <span class="tag">R</span>
         <span class="tag">Non-Parametric Statistics</span>
+        <span class="tag">Shapiro-Wilk</span>
+        <span class="tag">Mann-Whitney U</span>
         <span class="tag">Power BI</span>
-        <span class="tag">EQAO Data</span>
+      </div>
+      <p>
+        Evaluated literacy performance drivers and governance models across 72 Ontario school boards facing severe population skewness ranging from 35 to 17,000+ students.
       </p>
-      <p>Evaluated governance and enrollment drivers across 72 Ontario school boards with severe population skewness (35 to 17,000+ students). Applied Shapiro-Wilk normality testing and pivoted to Mann-Whitney U & Spearman rank correlations to avoid variance distortion.</p>
-      <div class="button-group">
-        <a href="https://github.com/yourusername/eqao-analysis" class="btn" target="_blank">View Code Repo</a>
-        <a href="https://public.tableau.com/app/profile/yourprofile" class="btn btn-alt" target="_blank">Interactive Dashboard</a>
+      <ul class="project-highlights">
+        <li><strong>Diagnostic Hygiene:</strong> Executed Shapiro-Wilk & Kolmogorov-Smirnov tests to identify severe normality violations across student population sizes.</li>
+        <li><strong>Statistical Integrity:</strong> Pivoted from parametric ANOVA to non-parametric Mann-Whitney U & Spearman’s rank correlations to eliminate variance distortion.</li>
+        <li><strong>Business Impact:</strong> Isolated non-obvious governance trends masked by aggregate data and presented findings via an interactive Power BI dashboard.</li>
+      </ul>
+      <div class="card-actions">
+        <a href="https://github.com/sivakami26/eqao-literacy-analysis" class="nav-btn" target="_blank">View Code Repo</a>
       </div>
     </div>
 
-    <!-- Project 2 -->
+    <!-- Project 2: Log Parsing -->
     <div class="project-card">
-      <h3 class="project-title">Automated WLAN Log Parsing Pipeline</h3>
-      <p class="tags">
+      <h3 class="project-title">Automated Log Diagnostics & Anomaly Detection Pipeline</h3>
+      <div class="tags">
         <span class="tag">Python</span>
         <span class="tag">Pandas</span>
+        <span class="tag">NumPy</span>
         <span class="tag">Regex</span>
         <span class="tag">Pipeline Automation</span>
+      </div>
+      <p>
+        Engineered scalable, vectorized parsing scripts to extract diagnostic traces and timing anomalies from multi-gigabyte hardware/firmware stress logs.
       </p>
-      <p>Built vectorized log parsing pipelines to process multi-gigabyte diagnostic trace files from 48-hour hardware/firmware stress tests, replacing manual trace reviews with automated anomaly flags.</p>
-      <div class="button-group">
-        <a href="https://github.com/yourusername/log-pipeline" class="btn" target="_blank">View Code Repo</a>
+      <ul class="project-highlights">
+        <li><strong>Vectorized Ingestion:</strong> Built regex-driven Python pipelines to process unstructured log streams from 48-hour hardware execution tests.</li>
+        <li><strong>Automation:</strong> Eliminated manual trace verification, reducing bug diagnostic overhead by hours while accelerating anomaly detection precision.</li>
+        <li><strong>Data Hygiene:</strong> Handled corrupt timestamp records and missing diagnostic payloads through automated validation checks.</li>
+      </ul>
+      <div class="card-actions">
+        <a href="https://github.com/sivakami26/log-parsing-pipeline" class="nav-btn" target="_blank">View Code Repo</a>
       </div>
     </div>
   </section>
+
+  <section>
+    <h2>Core Technical Competencies</h2>
+    <div class="tags" style="gap: 8px;">
+      <span class="tag" style="font-size: 0.85rem; padding: 4px 12px;">Python (Pandas, NumPy, SciPy)</span>
+      <span class="tag" style="font-size: 0.85rem; padding: 4px 12px;">R (dplyr, ggplot2)</span>
+      <span class="tag" style="font-size: 0.85rem; padding: 4px 12px;">SQL (Window Functions, CTEs)</span>
+      <span class="tag" style="font-size: 0.85rem; padding: 4px 12px;">Power BI & Tableau</span>
+      <span class="tag" style="font-size: 0.85rem; padding: 4px 12px;">Hypothesis Testing</span>
+      <span class="tag" style="font-size: 0.85rem; padding: 4px 12px;">3-Tier Data Cleaning</span>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Sivakami • Hosted on GitHub Pages</p>
+  </footer>
 
 </body>
 </html>
