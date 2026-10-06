@@ -3,7 +3,7 @@
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sivakami-srinivasan-9213b977/)
 [![Portfolio Website](https://img.shields.io/badge/Portfolio-sivakami26.github.io-0052CC?style=flat-square&logo=githubpages&logoColor=white)](https://sivakami26.github.io)
-[![Tableau Public](https://img.shields.io/badge/Tableau-Public_Profile-E97627?style=flat-square&logo=tableau&logoColor=white)]([https://public.tableau.com](https://public.tableau.com/app/profile/sivakami.srinivasan4055/vizzes))
+[![Tableau Public](https://img.shields.io/badge/Tableau-Public_Profile-E97627?style=flat-square&logo=tableau&logoColor=white)]((https://public.tableau.com/app/profile/sivakami.srinivasan4055/vizzes))
 [![Email](https://img.shields.io/badge/Email-Contact_Me-D14836?style=flat-square&logo=gmail&logoColor=white)](sivakamisrinivasan@gmail.com)
 
 ---
