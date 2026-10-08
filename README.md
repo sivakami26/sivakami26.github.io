@@ -45,8 +45,8 @@ I am a **Master of Data Analytics Candidate** (3.78 GPA) with **8+ years of hard
 
 | Project | Tech Stack | Key Focus & Impact |
 | :--- | :--- | :--- |
-| 📊 **[Ontario School Board Literacy Analysis](https://github.com/sivakami26/eqao-literacy-analysis)** | `R`, `dplyr`, `Mann-Whitney U`, `Power BI` | Addressed demographic skewness across 72 school boards using `dplyr` pipeline transformations and non-parametric rank tests. |
-| ⚡ **[Automated Log Diagnostics Pipeline](https://github.com/sivakami26/log-parsing-pipeline)** | `Python`, `scikit-learn`, `Pandas`, `Regex` | Developed vectorized parsing scripts and baseline clustering models to classify execution anomalies in multi-gigabyte hardware logs. |
+| 📊 **[Ontario School Board Literacy Analysis](https://github.com/sivakami26/Ontario-Education-Analytics)** | `R`, `dplyr`, `Mann-Whitney U`, `Power BI` | Addressed demographic skewness across 72 school boards using `dplyr` pipeline transformations and non-parametric rank tests. |
+| ⚡ **[Automated Log Diagnostics Pipeline](https://github.com/sivakami26/log_parsing_pipeline)** | `Python`, `scikit-learn`, `Pandas`, `DBSCAN` | Developed vectorized parsing scripts and baseline clustering models to classify execution anomalies in multi-gigabyte hardware logs. |
 
 ---
 
